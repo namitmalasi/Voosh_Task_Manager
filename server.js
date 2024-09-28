@@ -8,6 +8,9 @@ const app = express();
 dotenv.config();
 app.use(cors());
 
+app.use(express.json());
+app.use(cookieParser());
+
 const port = process.env.PORT || 6000;
 app.listen(port, (req, res) => {
   console.log(`Server running at port no ${port}`);
